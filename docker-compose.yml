@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - env/postgres.env
+    volumes: 
+      - ./scripts/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./postgresql_data:/var/lib/postgresql/data
+
+  bot:
+    build:
+      context: ./weather_bot
+    restart: always
+    env_file:
+      - env/postgres.env
+      - env/weather_bot.env
+    depends_on:
+      - db
+    links:
+      - db:db
+
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
+  #   links:
+  #     - db:db
+
+  
