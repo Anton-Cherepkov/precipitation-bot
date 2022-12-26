@@ -12,8 +12,13 @@
 
 Избранные локации пользователя хранятся в базе данных [PostgreSQL](https://hub.docker.com/_/postgres).
 
-## Пример взаимодействия
+## Примеры взаимодействия
+### Меню
+![image](https://user-images.githubusercontent.com/11422372/209539132-804e34e5-2ee2-426f-9dd0-c9dfadc560c2.png)
+### Получение прогноза
 ![image](https://user-images.githubusercontent.com/11422372/209538103-89106755-5537-46cc-985b-f18b920763eb.png)
+### Добавление локации
+![image](https://user-images.githubusercontent.com/11422372/209539335-6a65479c-0d1c-41fd-b2ad-0c4e0056b8ec.png)
 
 
 ## Системные требования
